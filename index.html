@@ -617,6 +617,7 @@
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 20px;
+            color: var(--secondary);
         }
 
         .footer-text {
@@ -652,6 +653,7 @@
             font-size: 18px;
             margin-bottom: 20px;
             font-weight: 600;
+            color: var(--secondary);
         }
 
         .footer-links ul {
@@ -722,6 +724,18 @@
             
             .nav-links {
                 display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--secondary);
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
             }
             
             .menu-toggle {
@@ -928,11 +942,20 @@
                 </div>
                 <div class="skill">
                     <div class="skill-name">
-                        <span>Others</span>
-                        <span>50%</span>
+                        <span>JavaScript</span>
+                        <span>85%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-level" data-level="50%"></div>
+                        <div class="skill-level" data-level="85%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">
+                        <span>React</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="80%"></div>
                     </div>
                 </div>
             </div>
@@ -957,13 +980,22 @@
                         <div class="skill-level" data-level="90%"></div>
                     </div>
                 </div>
+                <div class="skill">
+                    <div class="skill-name">
+                        <span>Database Management</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="75%"></div>
+                    </div>
+                </div>
             </div>
             
             <div class="skill-category" id="skillDesign">
                 <h3>Graphic designing</h3>
                 <div class="skill">
                     <div class="skill-name">
-                        <span>Colour theory</span>
+                        <span>UI/UX Design</span>
                         <span>90%</span>
                     </div>
                     <div class="skill-bar">
@@ -972,7 +1004,7 @@
                 </div>
                 <div class="skill">
                     <div class="skill-name">
-                        <span>Time management</span>
+                        <span>Color Theory</span>
                         <span>85%</span>
                     </div>
                     <div class="skill-bar">
@@ -1002,20 +1034,15 @@
                 </div>
                 <div class="project-content">
                     <h3>Portfolio Website</h3>
-                    <p><h4>The Challenge:</h4>To create a central hub for my professional online presence that not only displays my projects
-                        but also demonstrates my competency in modern front-end development, UI/UX design principles, and creating
-                        responsive, performant websites.
-                        <h4>The Solution:</h4>I designed and developed a custom, responsive portfolio website from the ground up.
-                        The design prioritizes clarity and ease of navigation, allowing potential clients and employers
-                        to quickly access my work, understand my skills, and easily get in contact. 
-                        The site itself acts as the first piece of evidence for my capabilities..</p>
+                    <p>A customizable portfolio template designed for developers and designers to showcase their work effectively with a modern, responsive design.</p>
                     <div class="project-tags">
                         <span class="project-tag">HTML</span>
                         <span class="project-tag">CSS</span>
-                        <span class="project-tag">Customizable</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Responsive</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://daksh19368.github.io/Customizable-portfolio/" target="_blank"class="project-link primary">View Live</a>
+                        <a href="https://daksh19368.github.io/Customizable-portfolio/" target="_blank" class="project-link primary">View Live</a>
                         <a href="#" class="project-link secondary">Details</a>
                     </div>
                 </div>
@@ -1027,16 +1054,12 @@
                 </div>
                 <div class="project-content">
                     <h3>E-Commerce Platform</h3>
-                    <p>The Challenge: To build a high-converting, visually stunning e-commerce website that simplifies the user 
-                        journey from discovery to checkout, while maintaining blazing-fast performance and SEO best practices.
-                        
-                       My Solution: I designed and developed a custom, mobile-first e-commerce platform focused on intuitive navigation,
-                        a frictionless checkout process, and strategic product showcasing. Built with a modern tech stack 
-                        for speed and scalability.</p>
+                    <p>A modern e-commerce website with product filtering, shopping cart, and checkout functionality designed for optimal user experience.</p>
                     <div class="project-tags">
-                        <span class="project-tag">Customizable</span>
-                        <span class="project-tag">Not complete</span>
-                        <span class="project-tag">Flexible</span>
+                        <span class="project-tag">E-Commerce</span>
+                        <span class="project-tag">UI/UX</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Responsive</span>
                     </div>
                     <div class="project-links">
                         <a href="https://daksh19368.github.io/E-comm/" class="project-link primary">View Live</a>
@@ -1051,16 +1074,12 @@
                 </div>
                 <div class="project-content">
                     <h3>Chocolate Company Website</h3>
-                    <p>The Challenge: To craft a decadent and immersive online experience for a luxury chocolate brand,
-                        translating the richness and quality of the products into a digital journey that entices 
-                        customers and drives online sales.
-                        My Solution: I designed and developed a visually sumptuous e-commerce website that emphasizes 
-                        high-quality photography, evokes a sense of indulgence, and simplifies the gifting and purchasing
-                        process. The mobile-first build ensures a seamless experience from discover to delivery.</p>
+                    <p>An elegant website for a chocolate company featuring product showcases, brand story, and e-commerce functionality with a delicious design.</p>
                     <div class="project-tags">
-                        <span class="project-tag">Customizable</span>
-                        <span class="project-tag">Not complete</span>
-                        <span class="project-tag">Flexible</span>
+                        <span class="project-tag">Food</span>
+                        <span class="project-tag">E-Commerce</span>
+                        <span class="project-tag">UI/UX</span>
+                        <span class="project-tag">Branding</span>
                     </div>
                     <div class="project-links">
                         <a href="https://daksh19368.github.io/chocolate-company/" class="project-link primary">View Live</a>
@@ -1116,4 +1135,129 @@
                     <div class="form-group">
                         <input type="email" class="form-control" placeholder="Your Email" required>
                     </div>
-                   
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">Daksh</div>
+                <p class="footer-text">Creating elegant, functional digital experiences with a focus on user interaction and modern design principles.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Projects</h4>
+                <ul>
+                    <li><a href="#project1">Portfolio Website</a></li>
+                    <li><a href="#project2">E-Commerce Platform</a></li>
+                    <li><a href="#project3">Chocolate Company</a></li>
+                    <li><a href="#projects">View All</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Daksh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Scroll animations
+        function checkScroll() {
+            const elementsToAnimate = [
+                document.getElementById('aboutText'),
+                document.getElementById('aboutImage'),
+                document.getElementById('skillFrontend'),
+                document.getElementById('skillBackend'),
+                document.getElementById('skillDesign'),
+                document.getElementById('project1'),
+                document.getElementById('project2'),
+                document.getElementById('project3'),
+                document.getElementById('contactInfo'),
+                document.getElementById('contactForm'),
+                document.getElementById('service1'),
+                document.getElementById('service2'),
+                document.getElementById('service3'),
+                document.getElementById('service4'),
+                document.getElementById('service5'),
+                document.getElementById('service6')
+            ];
+            
+            elementsToAnimate.forEach(element => {
+                if (element) {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                        
+                        // Animate skill bars
+                        if (element.classList.contains('skill-category')) {
+                            const skillLevels = element.querySelectorAll('.skill-level');
+                            skillLevels.forEach(level => {
+                                const width = level.getAttribute('data-level');
+                                level.style.width = width;
+                            });
+                        }
+                    }
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+        
+        // Form submission
+        const contactFormElement = document.getElementById('contactFormElement');
+        if (contactFormElement) {
+            contactFormElement.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! I will get back to you soon.');
+                contactFormElement.reset();
+            });
+        }
+    </script>
+</body>
+</html>
