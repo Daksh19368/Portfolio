@@ -254,9 +254,93 @@
             opacity: 0.1;
         }
 
+        /* Services Section */
+        .services {
+            padding: 120px 40px;
+            background: var(--secondary);
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--secondary);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .service-card.animated {
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--accent-gradient);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .service-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            color: var(--text);
+            font-size: 15px;
+        }
+
+        .service-features li i {
+            color: var(--accent);
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .service-cta {
+            margin-top: 25px;
+        }
+
         /* Skills Section */
         .skills {
             padding: 120px 40px;
+            background: var(--bg-light);
         }
 
         .skills-container {
@@ -310,7 +394,7 @@
         /* Projects Section */
         .projects {
             padding: 120px 40px;
-            background: var(--bg-light);
+            background: var(--secondary);
         }
 
         .projects-grid {
@@ -421,6 +505,7 @@
         /* Contact Section */
         .contact {
             padding: 120px 40px;
+            background: var(--bg-light);
         }
 
         .contact-container {
@@ -619,7 +704,8 @@
         /* Responsive Design */
         @media (max-width: 992px) {
             .about-content,
-            .contact-container {
+            .contact-container,
+            .services-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -645,6 +731,7 @@
             .hero,
             .about,
             .skills,
+            .services,
             .projects,
             .contact {
                 padding: 80px 20px;
@@ -658,6 +745,10 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .service-card {
+                padding: 30px 20px;
+            }
         }
     </style>
 </head>
@@ -667,6 +758,7 @@
         <a href="#" class="logo">Daksh</a>
         <div class="nav-links">
             <a href="#about">About</a>
+            <a href="#services">Services</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -705,6 +797,120 @@
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">My Services</h2>
+        <div class="services-grid">
+            <div class="service-card" id="service1">
+                <div class="service-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>E-Commerce Websites</h3>
+                <p>Full-featured online stores with product management, secure payment processing, and inventory systems designed to convert visitors into customers.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Shopping cart & checkout system</li>
+                    <li><i class="fas fa-check"></i> Payment gateway integration</li>
+                    <li><i class="fas fa-check"></i> Product management system</li>
+                    <li><i class="fas fa-check"></i> Inventory tracking</li>
+                    <li><i class="fas fa-check"></i> Mobile-responsive design</li>
+                </ul>
+                <div class="service-cta">
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+            
+            <div class="service-card" id="service2">
+                <div class="service-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Business Websites</h3>
+                <p>Professional websites designed to represent your brand and convert visitors into customers with clear calls to action and modern design.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Responsive design</li>
+                    <li><i class="fas fa-check"></i> SEO optimized</li>
+                    <li><i class="fas fa-check"></i> Contact forms & lead generation</li>
+                    <li><i class="fas fa-check"></i> Analytics integration</li>
+                    <li><i class="fas fa-check"></i> Fast loading times</li>
+                </ul>
+                <div class="service-cta">
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+            
+            <div class="service-card" id="service3">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Portfolio Sites</h3>
+                <p>Showcase your work with a custom portfolio website that highlights your skills and projects in an engaging, visually appealing way.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Custom design</li>
+                    <li><i class="fas fa-check"></i> Project galleries</li>
+                    <li><i class="fas fa-check"></i> Contact functionality</li>
+                    <li><i class="fas fa-check"></i> Social media integration</li>
+                    <li><i class="fas fa-check"></i> Blog integration</li>
+                </ul>
+                <div class="service-cta">
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+            
+            <div class="service-card" id="service4">
+                <div class="service-icon">
+                    <i class="fas fa-blog"></i>
+                </div>
+                <h3>Blog Platforms</h3>
+                <p>Content management systems tailored for bloggers and content creators with intuitive interfaces and powerful publishing tools.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> User-friendly CMS</li>
+                    <li><i class="fas fa-check"></i> Comment systems</li>
+                    <li><i class="fas fa-check"></i> Category & tag organization</li>
+                    <li><i class="fas fa-check"></i> Social sharing</li>
+                    <li><i class="fas fa-check"></i> SEO-friendly structure</li>
+                </ul>
+                <div class="service-cta">
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+            
+            <div class="service-card" id="service5">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Responsive Design</h3>
+                <p>Websites that look great and function perfectly on all devices and screen sizes, ensuring optimal user experience everywhere.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Mobile-first approach</li>
+                    <li><i class="fas fa-check"></i> Cross-browser compatibility</li>
+                    <li><i class="fas fa-check"></i> Touch-friendly interfaces</li>
+                    <li><i class="fas fa-check"></i> Fast loading times</li>
+                    <li><i class="fas fa-check"></i> Flexible layouts</li>
+                </ul>
+                <div class="service-cta">
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+            
+            <div class="service-card" id="service6">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Custom Solutions</h3>
+                <p>Tailored web applications and functionality designed for your specific needs, with custom features and integrations.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> API integrations</li>
+                    <li><i class="fas fa-check"></i> Database design</li>
+                    <li><i class="fas fa-check"></i> Custom functionality</li>
+                    <li><i class="fas fa-check"></i> Web application development</li>
+                    <li><i class="fas fa-check"></i> Maintenance & support</li>
+                </ul>
+                <div class="service-cta">
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <h2 class="section-title">My Skills</h2>
@@ -729,6 +935,7 @@
                         <div class="skill-level" data-level="50%"></div>
                     </div>
                 </div>
+            </div>
             
             <div class="skill-category" id="skillBackend">
                 <h3>App development</h3>
@@ -750,7 +957,8 @@
                         <div class="skill-level" data-level="90%"></div>
                     </div>
                 </div>
-               
+            </div>
+            
             <div class="skill-category" id="skillDesign">
                 <h3>Graphic designing</h3>
                 <div class="skill">
@@ -908,131 +1116,4 @@
                     <div class="form-group">
                         <input type="email" class="form-control" placeholder="Your Email" required>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-about">
-                <div class="footer-logo">Daksh</div>
-                <p class="footer-text">Creating elegant, functional digital experiences with a focus on user interaction and modern design principles.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-links">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-links">
-                <h4>Projects</h4>
-                <ul>
-                    <li><a href="#">Portfolio Website</a></li>
-                    <li><a href="#">E-Commerce Platform</a></li>
-                    <li><a href="#">Chocolate Company</a></li>
-                    <li><a href="#">View All</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            <p>&copy; 2023 Daksh. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Menu Toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        
-        menuToggle.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
-        
-        // Scroll animations
-        function checkScroll() {
-            const aboutText = document.getElementById('aboutText');
-            const aboutImage = document.getElementById('aboutImage');
-            const skillFrontend = document.getElementById('skillFrontend');
-            const skillBackend = document.getElementById('skillBackend');
-            const skillDesign = document.getElementById('skillDesign');
-            const project1 = document.getElementById('project1');
-            const project2 = document.getElementById('project2');
-            const project3 = document.getElementById('project3');
-            const contactInfo = document.getElementById('contactInfo');
-            const contactForm = document.getElementById('contactForm');
-            
-            const scrollPosition = window.scrollY + window.innerHeight;
-            
-            if (scrollPosition > aboutText.offsetTop + 100) {
-                aboutText.classList.add('animated');
-                aboutImage.classList.add('animated');
-            }
-            
-            if (scrollPosition > skillFrontend.offsetTop + 100) {
-                skillFrontend.classList.add('animated');
-                skillBackend.classList.add('animated');
-                skillDesign.classList.add('animated');
-                
-                // Animate skill bars
-                const skillLevels = document.querySelectorAll('.skill-level');
-                skillLevels.forEach(level => {
-                    const width = level.getAttribute('data-level');
-                    level.style.width = width;
-                });
-            }
-            
-            if (scrollPosition > project1.offsetTop + 100) {
-                project1.classList.add('animated');
-                project2.classList.add('animated');
-                project3.classList.add('animated');
-            }
-            
-            if (scrollPosition > contactInfo.offsetTop + 100) {
-                contactInfo.classList.add('animated');
-                contactForm.classList.add('animated');
-            }
-        }
-        
-        window.addEventListener('scroll', checkScroll);
-        window.addEventListener('load', checkScroll);
-        
-        // Form submission
-        const contactFormElement = document.getElementById('contactFormElement');
-        contactFormElement.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            contactFormElement.reset();
-        });
-    </script>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
+                   
